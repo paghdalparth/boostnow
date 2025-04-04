@@ -1,0 +1,46 @@
+.dashboard-container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px 20px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+  }
+  
+  .dashboard-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #ffffff 20%, #a1c4fd 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 12px rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Image Wrapper with glassmorphism background */
+  .dashboard-image-wrapper {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    padding: 25px;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .dashboard-image-wrapper:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  }
+  
+  .dashboard-image {
+    width: 100%;
+    max-width: 1200px; /* Increased size */
+    height: auto;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+  }
+  

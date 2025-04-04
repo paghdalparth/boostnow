@@ -65,14 +65,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 5px; /* Reduced gap */
 }
 
 .slash-symbol {
   font-size: 4rem;
   font-weight: 800;
-  color: rgba(45, 45, 45, 0.3);
-  text-shadow: 5px 5px 10px rgba(45, 45, 45, 0.1);
+  color: rgba(45, 45, 45, 0.1);
+  text-shadow: 2px 2px 5px rgba(45, 45, 45, 0.2), 4px 4px 10px rgba(45, 45, 45, 0.1);
+  opacity: 0.7;
 }
 
 h1 {
@@ -98,7 +99,45 @@ h1 {
   font-size: 4rem; /* Increased size */
   color: #2d2d2d;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-  margin-top: 10px; /* Added margin to push it lower */
+  margin-top: 20px; /* Further pushed down */
+}
+
+/* Business Growth Box */
+.growth-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15px 25px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  font-weight: 700;
+  color: #fff;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.growth-icon {
+  font-size: 3rem;
+  color: #FFD700;
+}
+
+.growth-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.curved-text {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #ff6f61;
+  transform: rotate(-10deg);
+  background: rgba(255, 215, 0, 0.2);
+  padding: 10px 15px;
+  border-radius: 20px;
 }
 
 /* Subtitle */
@@ -145,3 +184,21 @@ p {
   font-size: 16px;
   color: #777;
 }
+
+
+.dashboard-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    color: white;
+    background: #4f46e5;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  
+  .dashboard-button:hover {
+    background: #4338ca;
+  }
+  

@@ -4,15 +4,15 @@ import "./HeroSection.css";
 const HeroSection = () => {
   return (
     <div className="hero-container">
-      {/* Video Background */}
-      <video autoPlay loop muted playsInline className="background-video">
+      {/* Background Video */}
+      <video className="background-video" autoPlay loop muted playsInline>
         <source src="/background.mp4" type="video/mp4" />
       </video>
 
-      {/* Navbar with Logo */}
+      {/* Navbar */}
       <nav className="navbar">
         <div className="navbar-content">
-          <img src="/logo.jpg" alt="Logo" className="logo" /> {/* Replace 'logo.png' with your actual logo file name */}
+          <img src="/logo.jpg" alt="Company Logo" className="logo" />
           <div className="menu-icon"></div>
         </div>
       </nav>
@@ -24,14 +24,17 @@ const HeroSection = () => {
           <span className="slash">///</span> Amplify <span className="highlight">your growth</span> with
           <span className="smart-ai"> Smart AI </span> insights
         </h1>
-        <p>You are just one click away from transforming your business with powerful analytics support.</p>
+        <p>One click away from transforming your business with powerful analytics.</p>
+
+        {/* CTA Buttons */}
         <div className="buttons">
           <button className="primary-btn">Start Free Trial</button>
           <button className="secondary-btn">How it Works</button>
         </div>
       </div>
 
-      <footer className="footer">GROWING PARTNERSHIP AROUND THE WORLD</footer>
+      {/* Footer */}
+      <footer className="footer">GROWING PARTNERSHIPS AROUND THE WORLD</footer>
     </div>
   );
 };
