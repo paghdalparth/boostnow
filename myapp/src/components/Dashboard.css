@@ -15,12 +15,12 @@
     font-weight: 800;
     margin-bottom: 40px;
     letter-spacing: 1px;
-    background: linear-gradient(135deg, #ffffff 20%, #a1c4fd 80%);
+    background: linear-gradient(135deg, #6b8efb 20%, #4a69bd 80%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 2px 12px rgba(255, 255, 255, 0.2);
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
   }
-  
+    
   /* Image Wrapper with glassmorphism background */
   .dashboard-image-wrapper {
     background: rgba(255, 255, 255, 0.1);
@@ -29,18 +29,40 @@
     border-radius: 30px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+  transform: translateY(-50px);
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
   }
   
+  .dashboard-image-wrapper.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .dashboard-image-wrapper.hidden {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+/* 
   .dashboard-image-wrapper:hover {
     transform: scale(1.03);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
-  }
+  } */
   
   .dashboard-image {
     width: 100%;
-    max-width: 1200px; /* Increased size */
+    max-width: 1200px;
     height: auto;
     border-radius: 20px;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in-out;
   }
-  
+
+  .dashboard-image:hover {
+    transform: scale(1.05) rotate(2deg); /* Slight zoom and rotation */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+    filter: brightness(1.1) contrast(1.05); /* More vibrant effect */
+  }
+
+  .dashboard-image-wrapper:hover {
+    box-shadow: 0 0 30px rgba(161, 196, 253, 0.5); /* Soft blue glow */
+  }

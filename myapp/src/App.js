@@ -2,6 +2,9 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HeroSection from "./components/HeroSection";
 import Dashboard from "./components/Dashboard";
+import GifSection from "./components/GifSection";
+import IntegrationSection from "./components/IntegrationSection";
+
 import "./App.css";
 
 const App = () => {
@@ -18,6 +21,8 @@ const App = () => {
           <Routes>
             <Route path="/" element={<HeroSection />} />
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/gifs" element={<GifSection />} />
+            <Route path="/integrations" element={<IntegrationSection />} />
           </Routes>
         </Router>
       </div>
