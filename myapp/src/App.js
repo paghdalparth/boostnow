@@ -4,6 +4,7 @@ import HeroSection from "./components/HeroSection";
 import Dashboard from "./components/Dashboard";
 import GifSection from "./components/GifSection";
 import IntegrationSection from "./components/IntegrationSection";
+import PricingSection from "./components/PricingSection";
 
 import "./App.css";
 
@@ -23,11 +24,12 @@ const App = () => {
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/gifs" element={<GifSection />} />
             <Route path="/integrations" element={<IntegrationSection />} />
+            <Route path="/pricing" element={<PricingSection />} />
           </Routes>
         </Router>
       </div>
     </div>
   );
-};
+};  
 
 export default App;
