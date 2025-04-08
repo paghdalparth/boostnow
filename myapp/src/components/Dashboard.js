@@ -2,36 +2,39 @@ import React, { useEffect, useState } from "react";
 import "./Dashboard.css";
 
 const Dashboard = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const [rotateX, setRotateX] = useState(90); // Start flipped down
 
   useEffect(() => {
     const handleScroll = () => {
       const imageWrapper = document.querySelector(".dashboard-image-wrapper");
       if (imageWrapper) {
         const rect = imageWrapper.getBoundingClientRect();
-        const scrollY = window.scrollY;
+        const windowHeight = window.innerHeight;
 
-        if (rect.top < window.innerHeight - 100 && scrollY > lastScrollY) {
-          // Scrolling down
-          setIsVisible(true);
-        } else if (scrollY < lastScrollY) {
-          // Scrolling up
-          setIsVisible(false);
-        }
+        // Adjusted progress calculation so flipping starts earlier
+        const progress = Math.min(
+          Math.max((windowHeight - rect.top) / windowHeight, 0),
+          1
+        );
 
-        setLastScrollY(scrollY);
+        // Flip earlier (start from 90° and reach 0° sooner)
+        setRotateX(90 - progress * 90);
       }
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+  }, []);
 
   return (
     <div className="dashboard-container">
       <h1 className="dashboard-title">BoostNow Sample Dashboard</h1>
-      <div className={`dashboard-image-wrapper ${isVisible ? "visible" : "hidden"}`}>
+      <div
+        className="dashboard-image-wrapper"
+        style={{
+          transform: `perspective(800px) rotateX(${rotateX}deg)`,
+        }}
+      >
         <img src="/image.png" alt="Dashboard" className="dashboard-image" />
       </div>
     </div>
