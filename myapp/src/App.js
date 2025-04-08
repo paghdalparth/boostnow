@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Link, Element } from "react-scroll";
 import HeroSection from "./components/HeroSection";
 import Dashboard from "./components/Dashboard";
 import GifSection from "./components/GifSection";
@@ -17,19 +17,19 @@ const App = () => {
         Your browser does not support the video tag.
       </video>
 
+      {/* Navigation Links for Smooth Scrolling */}
+      
+
+      {/* Sections with Smooth Scroll */}
       <div className="page-content">
-        <Router>
-          <Routes>
-            <Route path="/" element={<HeroSection />} />
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/gifs" element={<GifSection />} />
-            <Route path="/integrations" element={<IntegrationSection />} />
-            <Route path="/pricing" element={<PricingSection />} />
-          </Routes>
-        </Router>
+        <Element name="hero"><HeroSection /></Element>
+        <Element name="dashboard"><Dashboard /></Element>
+        <Element name="gifs"><GifSection /></Element>
+        <Element name="integrations"><IntegrationSection /></Element>
+        <Element name="pricing"><PricingSection /></Element>
       </div>
     </div>
   );
-};  
+};
 
 export default App;

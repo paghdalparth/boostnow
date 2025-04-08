@@ -21,7 +21,7 @@
   width: 100%;
   height: auto;
   border-radius: 20px; /* Curved edges on all sides */
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity .5s ease-in-out;
 }
 
 /* Lower opacity for the last row */

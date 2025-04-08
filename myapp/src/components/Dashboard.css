@@ -15,10 +15,10 @@
     font-weight: 800;
     margin-bottom: 40px;
     letter-spacing: 1px;
-    background: linear-gradient(135deg, #6b8efb 20%, #4a69bd 80%);
+    background: linear-gradient(90deg, #8364e8, #00aefd);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+    text-shadow: linear-gradient(90deg, #8364e8, #00aefd);
   }
     
   /* Image Wrapper with glassmorphism background */
@@ -40,8 +40,8 @@
   }
   
   .dashboard-image-wrapper.hidden {
-    opacity: 0;
-    transform: translateY(-50px);
+    opacity: 0.6;
+    transform: translateY(0px);
   }
 /* 
   .dashboard-image-wrapper:hover {
